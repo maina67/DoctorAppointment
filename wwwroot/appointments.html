@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="css/appointment.css" />
+</head>
+<body>
+  <h2>Book a New Appointment</h2>
+  <form id="bookForm">
+    <label for="doctorSelect">Select Doctor:</label>
+    <select id="doctorSelect" required>
+      <option value="">-- Select a Doctor --</option>
+    </select>
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" required />
+
+    <label for="time">Select Time:</label>
+    <input type="time" id="time" required />
+
+    <button type="submit">Book</button>
+  </form>
+
+  <h3>Your Appointments</h3>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Doctor</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="appointmentTableBody">
+    <!-- Appointments will be listed here -->
+  </tbody>
+</table>
+
+
+  <script src="js/appointments.js"></script>
+</body>
+</html>

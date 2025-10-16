@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  max-width: 400px;
+  width: 100%;
+}
+
+.toggle-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toggle-box button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.toggle-box button:hover {
+  background-color: #0056b3;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-box button {
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #218838;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  color: #dc3545;
+  font-size: 0.9em;
+}
+
+/* Additional styling for the admin login box */
+#adminLoginBox {
+  margin-top: 20px;
+}
+
+#adminLoginBox input {
+  margin-bottom: 10px;
+}
+
+#adminLoginBox button {
+  background-color: #007BFF;
+}
+
+#adminLoginBox button:hover {
+  background-color: #0056b3;
+}
+
+/* Link style for "Do you want to login as admin?" */
+#adminLink {
+  text-decoration: none;
+  color: #007BFF;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+#adminLink:hover {
+  text-decoration: underline;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}

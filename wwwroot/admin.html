@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">DocApp</h2>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="/login.html">Login</a></li>
+        <li><button onclick="logout()" class="logout-btn">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+
+    <!-- Tabs Navigation -->
+<div class="tabs">
+  <button class="tab-button active" data-tab="appointmentsSection">Appointments</button>
+  <button class="tab-button" data-tab="doctorsSection">Doctors List</button>
+  <button class="tab-button" data-tab="registerDoctorSection">Register Doctor</button>
+</div>
+
+
+    <!-- Appointments Section -->
+    <section id="appointmentsSection" class="tab-content active">
+      <h2>Appointments</h2>
+      <table id="appointmentsTable">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Appointment Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic appointments will be injected here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctorsSection" class="tab-content">
+      <h2>Doctors List</h2>
+      <table id="doctorsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Doctors will be listed here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Register New Doctor Section -->
+    <section id="registerDoctorSection" class="tab-content">
+      <h2>Register New Doctor</h2>
+      <form id="registerDoctorForm">
+        <!-- Automatically add Dr. to First Name -->
+        <input type="text" id="doctorFirstName" placeholder="First Name" required />
+        
+        <!-- Last Name Input -->
+        <input type="text" id="doctorLastName" placeholder="Last Name" required />
+        
+        <!-- Email Input -->
+        <input type="email" id="doctorEmail" placeholder="Email" required />
+        
+        <!-- Password Input -->
+        <input type="password" id="doctorPassword" placeholder="Password" required />
+        
+        <!-- Specialization Dropdown -->
+        <select id="doctorSpecialty" required>
+          <option value="" disabled selected>Select Specialization</option>
+          <option value="General Surgery">General Surgery</option>
+          <option value="Diagnostic Medicine">Diagnostic Medicine</option>
+          <option value="Cardiothoracic Surgery">Cardiothoracic Surgery</option>
+          <option value="Internal Medicine">Internal Medicine</option>
+          <option value="Oncology">Oncology</option>
+          <option value="Endocrinology">Endocrinology</option>
+          <option value="Cardiology">Cardiology</option>
+          <option value="Neurology">Neurology</option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="Dermatology">Dermatology</option>
+        </select>
+
+        <!-- Contact Input -->
+        <input type="text" id="doctorContact" placeholder="Contact Number" required />
+
+        <button type="submit">Register Doctor</button>
+      </form>
+      <p id="registerDoctorMessage"></p>
+    </section>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

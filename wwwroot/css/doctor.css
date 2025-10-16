@@ -1,0 +1,29 @@
+.header {
+  text-align: center;
+  background-color: #0078d4;
+  color: white;
+  padding: 1rem;
+}
+
+.appointment-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  background: #fafafa;
+}
+
+.complete-btn {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.complete-btn:disabled {
+  background-color: #28a745;
+  cursor: not-allowed;
+}
