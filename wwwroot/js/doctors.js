@@ -24,7 +24,7 @@ async function loadDoctorProfile() {
     const doctor = await response.json();
     const welcomeMsg = document.getElementById("welcomeDoctor");
     if (welcomeMsg) {
-      welcomeMsg.textContent = `Welcome ${doctor.name || "Doctor"}`;
+      welcomeMsg.textContent = `Welcome ${doctor.Name || "Doctor"}`;
     }
 
     console.log("✅ Doctor profile loaded successfully");

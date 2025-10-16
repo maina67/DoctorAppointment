@@ -81,9 +81,9 @@ namespace DoctorAppointmentSystem.Controllers
             }
         }
 
-        // ✅ Update appointment status (clean version)
+        // ✅ Update appointment status (accept only { status: "..." })
         [HttpPut("{id}/status")]
-        public IActionResult UpdateStatus(int id, [FromBody] Appointment updated)
+        public IActionResult UpdateStatus(int id, [FromBody] StatusUpdateRequest request)
         {
             var appointment = _context.Appointments.Find(id);
             if (appointment == null)
@@ -95,7 +95,7 @@ namespace DoctorAppointmentSystem.Controllers
                 });
             }
 
-            appointment.Status = updated.Status;
+            appointment.Status = request.Status;
             _context.SaveChanges();
 
             return Ok(new
@@ -154,5 +154,11 @@ namespace DoctorAppointmentSystem.Controllers
                 data = appointments
             });
         }
+    }
+
+    // ✅ DTO for status update
+    public class StatusUpdateRequest
+    {
+        public string Status { get; set; }
     }
 }
